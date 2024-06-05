@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.5.2",
     "@astrojs/netlify": "^5.2.0",
     "@astrojs/sitemap": "^3.1.2",
     "@astrojs/solid-js": "^4.0.1",
@@ -35,10 +36,10 @@
     "@unocss/postcss": "^0.59.0",
     "@unocss/preset-uno": "^0.59.0",
     "@unocss/reset": "^0.59.0",
-    "unocss": "^0.59.0",
-    "sanitize-html": "^2.13.0",
-    "motion": "^10.17.0",
     "autoprefixer": "^10.4.19",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "motion": "^10.17.0",
+    "sanitize-html": "^2.13.0",
+    "unocss": "^0.59.0"
   }
 }
