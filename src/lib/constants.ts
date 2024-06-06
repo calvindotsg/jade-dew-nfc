@@ -13,6 +13,11 @@ export const LINKS: {
         logo: "fa6-brands:instagram",
         name: "Instagram"
     },
+    {
+        link: "https://go.gov.sg/nsl-ndc/",
+        logo: "fa6-regular:party-horn",
+        name: "Event"
+    },
 ];
 
 export const ABOUT_ME: {
