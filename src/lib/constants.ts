@@ -4,31 +4,33 @@ export const LINKS: {
     name: string
 }[] = [
     {
-        link: "https://github.com/calvindotsg/",
-        logo: "fa6-brands:github",
-        name: "Github"
+        link: "https://www.facebook.com/JDRCS/",
+        logo: "fa6-brands:facebook",
+        name: "Facebook"
     },
     {
-        link: "https://www.linkedin.com/in/calvin-loh/",
-        logo: "fa6-brands:linkedin",
-        name: "LinkedIn"
-    },
-    {
-        link: "https://www.instagram.com/calvindotsg/",
+        link: "https://www.instagram.com/derrickgohsh/",
         logo: "fa6-brands:instagram",
         name: "Instagram"
     },
-    {
-        link: "https://www.strava.com/athletes/37641259/",
-        logo: "fa6-brands:strava",
-        name: "Strava"
-    },
-    {
-        link: "https://t.me/calvindotsg/",
-        logo: "fa6-brands:telegram",
-        name: "Telegram"
-    },
 ];
+
+export const ABOUT_ME: {
+    description: string[]
+} = {
+    description: [
+        "I seek practical experiences where opportunities for learning are actively up for grabs.",
+        "If you tell me to wake up at 5.30am, I would say you're crazy. But if it's for cycling, count me in!"
+    ]
+}
+
+export const WELCOME: {
+    description: string[]
+} = {
+    description: [
+        "🇸🇬 Join us for Nee Soon Link National Day Celebrations"
+    ]
+}
 
 export const CAREER: {
     company: string
@@ -64,23 +66,6 @@ export const CAREER: {
         emoji: "🔎"
     }
 ]
-
-export const ABOUT_ME: {
-    description: string[]
-} = {
-    description: [
-        "I seek practical experiences where opportunities for learning are actively up for grabs.",
-        "If you tell me to wake up at 5.30am, I would say you're crazy. But if it's for cycling, count me in!"
-    ]
-}
-
-export const WELCOME: {
-    description: string[]
-} = {
-    description: [
-        "👋 Hi, I'm Calvin", "Software Engineer. Enthusiastic learner. Road cyclist."
-    ]
-}
 
 export const NOW: {
     description: string[]
