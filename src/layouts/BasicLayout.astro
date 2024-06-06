@@ -1,5 +1,5 @@
 ---
-import {METADATA, LINKS, CAREER} from "../lib/constants";
+import { EVENT_METADATA, ORGANIZER_METADATA, TICKET_METADATA } from "../lib/constants";
 
 interface Props {
     title: string;
@@ -17,23 +17,42 @@ const image = `${Astro.url.origin}/preview.jpg`;
 
 const schema = {
     "@context": "http://schema.org",
-    "@type": "Person",
-    name: METADATA.name,
-    url: METADATA.site_url,
-    sameAs: [LINKS.map(item => item.link)],
-    image: METADATA.image_url,
-    jobTitle: CAREER.at(0).job_name,
-    worksFor: {
-        "@type": "Organization", name: CAREER.at(0).job_name, address: {
+    "@type": "Event",
+    "name": EVENT_METADATA.name, // Name of the event
+    "startDate": EVENT_METADATA.startDate, // Start date of the event in ISO 8601 format
+    "endDate": EVENT_METADATA.endDate, // End date of the event in ISO 8601 format
+    "eventAttendanceMode": "https://schema.org/" + EVENT_METADATA.attendanceMode, // Attendance mode: OnlineEventAttendanceMode, OfflineEventAttendanceMode, or MixedEventAttendanceMode
+    "eventStatus": "https://schema.org/" + EVENT_METADATA.status, // Event status: EventScheduled, EventCancelled, EventPostponed, EventRescheduled
+    "location": {
+        "@type": "Place",
+        "name": EVENT_METADATA.locationName, // Name of the location
+        "address": {
             "@type": "PostalAddress",
-            addressLocality: METADATA.address_locality,
-            addressCountry: METADATA.address_country,
-        },
+            "streetAddress": EVENT_METADATA.streetAddress, // Street address
+            "addressLocality": EVENT_METADATA.addressLocality, // City
+            "addressRegion": EVENT_METADATA.addressRegion, // State or region
+            "postalCode": EVENT_METADATA.postalCode, // Postal code
+            "addressCountry": EVENT_METADATA.addressCountry // Country
+        }
     },
-    nationality: {
-        "@type": "Country", name: METADATA.address_locality,
+    "image": EVENT_METADATA.image_url, // URL of the event image
+    "description": EVENT_METADATA.description, // Description of the event
+    "url": EVENT_METADATA.site_url, // URL of the event page
+    "organizer": {
+        "@type": "Organization",
+        "name": ORGANIZER_METADATA.name, // Name of the organizer
+        "url": ORGANIZER_METADATA.url // URL of the organizer
+    },
+    "offers": {
+        "@type": "Offer",
+        "url": TICKET_METADATA.url, // URL to purchase tickets
+        "price": TICKET_METADATA.price, // Ticket price
+        "priceCurrency": TICKET_METADATA.currency, // Currency of the ticket price
+        "availability": "https://schema.org/" + TICKET_METADATA.availability, // Availability: InStock, OutOfStock, PreOrder
+        "validFrom": TICKET_METADATA.validFrom // ISO 8601 date when the tickets go on sale
     },
 };
+
 ---
 
 <!doctype html>
@@ -53,7 +72,7 @@ const schema = {
     <meta property="og:url" content={Astro.url.origin}/>
     <meta
             property="og:image"
-            content={image || METADATA.image_url}
+            content={image || EVENT_METADATA.image_url}
     />
     <!-- Basic Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image"/>
@@ -61,7 +80,7 @@ const schema = {
     <meta name="twitter:description" content={description}/>
     <meta
             name="twitter:image"
-            content={image || METADATA.image_url}
+            content={image || EVENT_METADATA.image_url}
     />
 
     <link rel="preconnect" href="https://cdn.fontshare.com"/>

@@ -11,13 +11,13 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://calvin.sg/",
+  site: "https://jadedew.netlify.app/",
   integrations: [
     sitemap(),
     robotsTxt({
       sitemap: [
-        "https://calvin.sg/sitemap-index.xml",
-        "https://calvin.sg/sitemap-0.xml",
+        "https://jadedew.netlify.app/sitemap-index.xml",
+        "https://jadedew.netlify.app/sitemap-0.xml",
       ],
     }),
     solidJs(),

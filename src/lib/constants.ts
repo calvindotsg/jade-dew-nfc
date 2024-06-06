@@ -20,15 +20,6 @@ export const LINKS: {
     },
 ];
 
-export const ABOUT_ME: {
-    description: string[]
-} = {
-    description: [
-        "I seek practical experiences where opportunities for learning are actively up for grabs.",
-        "If you tell me to wake up at 5.30am, I would say you're crazy. But if it's for cycling, count me in!"
-    ]
-}
-
 export const WELCOME: {
     description: string[]
 } = {
@@ -37,74 +28,41 @@ export const WELCOME: {
     ]
 }
 
-export const CAREER: {
-    company: string
-    company_url: string
-    description: string[]
-    end_date: string
-    job_name: string
-    start_date: string
-    emoji: string
-}[] = [
-    {
-        company: "heymax.ai",
-        company_url: "https://www.heymax.ai",
-        description: [
-            "Maximising value, minimising effort: Identifying bottlenecks with opportunities for automation.",
-            "We grow by listening to why you love heymax along with your pain points."
-        ],
-        end_date: "Present",
-        job_name: "Software engineer",
-        start_date: "Aug 2023",
-        emoji: "🔧"
-    },
-    {
-        company: "NCS PTE LTD",
-        company_url: "https://www.ncs.co",
-        description: [
-            "Resolved production issues in a full-stack web application by 90%.",
-            "First point of contact with end users to communicate and resolve pain points with offshore developers."
-        ],
-        end_date: "Aug 2023",
-        job_name: "Business systems analyst",
-        start_date: "Jun 2022",
-        emoji: "🔎"
-    }
-]
-
-export const NOW: {
-    description: string[]
-} = {
-    description: [
-        "Hustle hustling at startup, probably cycling when you find me"
-    ]
-}
-
 export const FOOTER: {
     footer: string
 } = {
-    footer: "Built with ❤️, more love to Astro template by Gianmarco"
+    footer: "Built with ❤️ by your neighbours at Jade Dew RN"
 }
 
-export const METADATA: {
-    title: string
-    description: string
-    site_url: string
-    name: string
-    image_url: string
-    address_locality: string
-    address_country: string
-    email_obfuscated: string
-} = {
-    title: "Calvin - Software engineer | Enthusiastic learner | Road Cyclist",
-    description: "Hustle hustling at startup, probably cycling when you find me",
-    site_url: "https://calvin.sg/",
-    name: "Calvin",
-    image_url: "https://calvin.sg/preview.jpg",
-    address_locality: "Singapore",
-    address_country: "SG",
-    email_obfuscated: "hello[at]calvin.sg"
-}
+export const EVENT_METADATA = {
+    name: "Nee Soon Link National Day Celebrations 2024", // Name of the event
+    startDate: "2024-08-03T07:30:00+08:00", // Start date in ISO 8601 format
+    endDate: "2024-08-03T17:00:00+08:00", // End date in ISO 8601 format
+    attendanceMode: "OnlineEventAttendanceMode", // Attendance mode: Online, Offline, or Mixed
+    status: "EventScheduled", // Status of the event: Scheduled, Cancelled, Postponed, or Rescheduled
+    locationName: "North View Primary School", // Name of the location
+    streetAddress: "210 Yishun Ave 6", // Street address
+    addressLocality: "Singapore", // City
+    addressRegion: "Singapore", // State or region (if applicable)
+    postalCode: "768960", // Postal code
+    addressCountry: "SG", // Country code
+    image_url: "https://jadedew.netlify.app/preview.jpg", // URL of the event image
+    description: "Come and celebrate National Day with Nee Soon Link!", // Description of the event
+    site_url: "https://www.onepa.gov.sg/events/nee-soon-link-national-day-celebrations-2024-27909168", // URL of the event page
+};
+
+export const ORGANIZER_METADATA = {
+    name: "Nee Soon Link CC", // Name of the organizer
+    url: "https://www.facebook.com/JDRCS/", // URL of the organizer
+};
+
+export const TICKET_METADATA = {
+    url: "https://www.onepa.gov.sg/events/nee-soon-link-national-day-celebrations-2024-27909168", // URL to purchase tickets
+    price: "6", // Ticket price
+    currency: "SGD", // Currency of the ticket price
+    availability: "InStock", // Availability: InStock, OutOfStock, PreOrder
+    validFrom: "2024-06-06T00:00:00+08:00", // ISO 8601 date when the tickets go on sale
+};
 
 export const VIDEO_CARD: {
     id: string,
