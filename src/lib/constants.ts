@@ -15,7 +15,7 @@ export const LINKS: {
     },
     {
         link: "https://go.gov.sg/nsl-ndc/",
-        logo: "fa6-regular:gift",
+        logo: "fa6-regular:star",
         name: "Event"
     },
 ];
