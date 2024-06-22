@@ -52,7 +52,7 @@ export const EVENT_METADATA = {
 };
 
 export const ORGANIZER_METADATA = {
-    name: "Nee Soon Link CC", // Name of the organizer
+    name: "Jade Dew RN", // Name of the organizer
     url: "https://www.facebook.com/JDRCS/", // URL of the organizer
 };
 
