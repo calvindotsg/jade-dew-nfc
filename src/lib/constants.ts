@@ -24,7 +24,7 @@ export const WELCOME: {
     description: string[]
 } = {
     description: [
-        "🇸🇬 Join us for Nee Soon Link National Day Celebrations"
+        "👋 Welcome to Jade Dew RN @ Nee Soon Link"
     ]
 }
 
@@ -69,8 +69,8 @@ export const VIDEO_CARD: {
     title: string,
     poster: string,
 } = {
-    id: "Jkqu3oMTs9o",
-    title: "NDP 2024 Theme Song - Not Alone [Official Music Video]",
+    id: "JOc1RGkBviQ",
+    title: "NDP 1998 Theme Song - Home",
     poster: "https://pbs.twimg.com/card_img/1796041716497354752/P9p8hRzr?format=jpg&name=small"
 }
 

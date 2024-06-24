@@ -6,10 +6,13 @@ import { Image } from "astro:assets";
 
 <Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
   <div class="flex flex-col gap-2">
-      <Image
-        src={posterImage}
-        class="w-full h-full object-cover select-none pointer-events-none shadow-border"
-        alt="poster"
-      />
+
+      <a href="https://www.facebook.com/JDRCS/photos" aria-label="poster" target="_blank" key="poster">
+          <Image
+            src={posterImage}
+            class="w-full h-full object-cover select-none pointer-events-none shadow-border"
+            alt="poster"
+          />
+      </a>
   </div>
 </Card>
