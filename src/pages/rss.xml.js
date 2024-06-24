@@ -9,8 +9,8 @@ import { METADATA } from "../lib/constants.js";
 export async function GET(context) {
   const blog = await getCollection("blog");
   return rss({
-    title: `${METADATA.name}`,
-    description: `${METADATA.description}`,
+    title: "Jade Dew RN",
+    description: "We are fellow neighbours who serve in the RC, NC, RN to promote neighbourliness through programmes to build a vibrant and cohesive community.",
     site: context.site,
     items: blog.map((post) => ({
       title: post.data.title,
