@@ -5,7 +5,7 @@ description: "Lyrics for National Day Parade 2024 Theme song: Not Alone"
 pubDate: 2024-08-09
 category: "lyrics"
 author: "Benjamin Kheng & Evan Low"
-customData: "https://blog.design-start.com/wp-content/uploads/2024/03/ndplogo2024.jpg"
+customData: "https://jadedew.netlify.app/lyrics/2024.webp"
 youtube_id: "Jkqu3oMTs9o"
 ---
 

@@ -5,7 +5,7 @@ description: "Lyrics for National Day Parade 1998 Theme song: Home"
 pubDate: 1998-08-09
 category: "lyrics"
 author: "Kit Chan and Dick Lee"
-customData: "https://graphic.sg/media/pages/gallery/national-day-parade-logo-1998/2356737263-1597722320/1998-ndp-1080x.jpg"
+customData: "https://jadedew.netlify.app/lyrics/1998.jpg"
 youtube_id: "JOc1RGkBviQ"
 ---
 

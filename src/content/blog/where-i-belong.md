@@ -5,7 +5,7 @@ description: "Lyrics for National Day Parade 2001 Theme song: Where I Belong"
 pubDate: 2001-08-09
 category: "lyrics"
 author: Tanya Chua
-customData: "https://graphic.sg/media/pages/gallery/national-day-parade-logo-2001/3491595531-1597722320/2001-ndp-1080x.jpg"
+customData: "https://jadedew.netlify.app/lyrics/2001.jpg"
 youtube_id: "jUf-5W6AKes"
 ---
 
