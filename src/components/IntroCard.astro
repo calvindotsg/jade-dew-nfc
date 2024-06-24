@@ -27,12 +27,12 @@ import portfolioImage from '../assets/me.webp'
         ))}
       </div>
     </div>
-    <Image
-      width="300"
-      height="300"
-      src={portfolioImage}
-      class="w-auto max-h-[300px] select-none absolute right-[-50px] bottom-[-70px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-[-50px] md:bottom-auto md:z-auto pointer-events-none shadow-border"
-      alt={`${EVENT_METADATA.name}`}
-    />
+    <div class="relative w-full h-full">
+      <Image
+        src={portfolioImage}
+        class="w-full h-full object-cover select-none pointer-events-none shadow-border"
+        alt={`${EVENT_METADATA.name}`}
+      />
+    </div>
   </div>
 </Card>
