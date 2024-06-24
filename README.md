@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">👋 Join us for Nee Soon Link National Day Celebrations</h1>
+  <h1 align="center">👋 Welcome to Jade Dew RN @ Nee Soon Link</h1>
 </p>
 <!-- PROJECT LOGO -->
 
@@ -11,7 +11,7 @@
 [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/calvindotsg/jade-dew-nfc/main)](https://github.com/calvindotsg/jade-dew-nfc/commits/main/)
 [![GitHub forks](https://img.shields.io/github/forks/calvindotsg/jade-dew-nfc)](https://github.com/calvindotsg/jade-dew-nfc/forks)
 
-Welcome to the official repository for the Nee Soon Link National Day Celebrations website, created by the Jade Dew Residents Network. This site provides all the necessary information about the event, including schedules, ticket information, and more.
+Welcome to the official repository for the Jade Dew RN @ Nee Soon Link website, created by the Jade Dew Residents Network.
 
 ![Event Preview](public/preview.jpg)
 
@@ -78,7 +78,7 @@ For any queries or discussions regarding the project, please open an issue in th
 
 ## Acknowledgement
 
-This web app [Nee Soon Link National Day Celebrations website](https://jadedew.netlify.app/) is a fork of the works of [Gianmarco](https://github.com/Ladvace)
+This web app [Jade Dew RN @ Nee Soon Link website](https://jadedew.netlify.app/) is a fork of the works of [Gianmarco](https://github.com/Ladvace)
 
 ---
 

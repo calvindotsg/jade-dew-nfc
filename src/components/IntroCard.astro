@@ -1,7 +1,7 @@
 ---
 import Card from "./Card/index.astro";
 import Button from "./Button.astro";
-import { LINKS, WELCOME, EVENT_METADATA } from "../lib/constants";
+import { LINKS, WELCOME, METADATA } from "../lib/constants";
 import { Icon } from 'astro-icon/components';
 import { Image } from "astro:assets";
 import portfolioImage from '../assets/me.webp'
@@ -27,11 +27,14 @@ import portfolioImage from '../assets/me.webp'
         ))}
       </div>
     </div>
-    <div class="relative w-full h-full">
+    <div class="flex">
       <Image
+        width="300"
+        height="300"
         src={portfolioImage}
-        class="w-full h-full object-cover select-none pointer-events-none shadow-border"
-        alt={`${EVENT_METADATA.name}`}
+        class="w-auto max-h-[300px] select-none absolute relative right-[-25px] bottom-auto z-auto opacity-100 md:opacity-100 md:relative md:right-[-50px] md:bottom-auto md:z-auto pointer-events-none shadow-border"
+        alt={METADATA.name}
       />
     </div>
+  </div>
 </Card>

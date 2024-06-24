@@ -2,14 +2,15 @@
 import { formatDate } from "../lib/helpers";
 import type { MarkdownLayoutProps } from "astro";
 import BasicLayout from "./BasicLayout.astro";
-import {ORGANIZER_METADATA, VIDEO_CARD} from "../lib/constants";
-import {YouTube} from "astro-embed";
+import { METADATA } from "../lib/constants";
+import { YouTube } from "astro-embed";
 
 type Props = MarkdownLayoutProps<{
   title: string;
   description: string;
   pubDate: string;
   minutesRead: string;
+  customData: string;
 }>;
 
 const { slug } = Astro.params;
@@ -20,8 +21,10 @@ const { frontmatter } = Astro.props;
   frontmatter={frontmatter}
   slug={slug}
   page="blog"
-  title={`${ORGANIZER_METADATA.name} - ${frontmatter.title}`}
+  title={`${METADATA.name} - ${frontmatter.title}`}
   description={frontmatter.description}
+  customData={frontmatter.customData}
+  youtube_id={frontmatter.youtube_id}
 >
   <main class="mx-auto max-w-3xl w-full h-screen p-8 text-neutral-100">
     <a
@@ -32,18 +35,22 @@ const { frontmatter } = Astro.props;
     <div class="my-10">
       <h1 class="text-5xl font-semibold">{frontmatter.title}</h1>
       <div class="flex justify-between pt-4 text-gray-500 text-sm">
-        <p>{formatDate(new Date(frontmatter.pubDate))}</p>
+        <p>{new Date(frontmatter.pubDate).getFullYear()}</p>
         <p>{frontmatter.minutesRead}</p>
       </div>
     </div>
-    <YouTube
-      id={VIDEO_CARD.id}
-      title={VIDEO_CARD.title}
-      playlabel={`Play the video ${VIDEO_CARD.title}`}
-      poster={VIDEO_CARD.poster}
-    />
-    <article class="prose prose-p:text-red-500 prose-slate prose-invert">
-      <slot />
-    </article>
+    <div class="flex flex-col gap-2">
+      <YouTube
+        id={frontmatter.youtube_id}
+        title={frontmatter.title}
+        playlabel={`Play the video ${frontmatter.title}`}
+        poster={frontmatter.customData}
+      />
+    </div>
+    <div class="flex flex-col pt-4">
+      <article class="prose prose-p:text-red-500 prose-slate prose-invert">
+        <slot />
+      </article>
+    </div>
   </main>
 </BasicLayout>

@@ -6,6 +6,7 @@ import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
 
 import solidJs from "@astrojs/solid-js";
+import { remarkReadingTime } from "./src/lib/remark-reading-time.mjs";
 
 import svelte from "@astrojs/svelte";
 
@@ -25,6 +26,9 @@ export default defineConfig({
     icon(),
     svelte(),
   ],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
   output: "server",
   adapter: netlify({ edgeMiddleware: true }),
   vite: {

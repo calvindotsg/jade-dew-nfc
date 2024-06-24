@@ -2,12 +2,12 @@
 import Card from "./Card/index.astro";
 import posterImage from '../assets/poster.webp'
 import { Image } from "astro:assets";
+import { METADATA } from "../lib/constants";
 ---
 
-<Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3">
   <div class="flex flex-col gap-2">
-
-      <a href="https://www.facebook.com/JDRCS/photos" aria-label="poster" target="_blank" key="poster">
+      <a href={METADATA.site_url} aria-label={METADATA.name} target="_blank" key={METADATA.name}>
           <Image
             src={posterImage}
             class="w-full h-full object-cover select-none pointer-events-none shadow-border"

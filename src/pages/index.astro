@@ -4,7 +4,7 @@ import Card from "../components/Card/index.astro";
 import IntroCard from "../components/IntroCard.astro";
 import VideoCard from "../components/VideoCard.astro";
 import ImageCard from "../components/ImageCard.astro";
-import { FOOTER,EVENT_METADATA } from "../lib/constants";
+import { FOOTER,METADATA } from "../lib/constants";
 ---
 
 <script>
@@ -30,8 +30,8 @@ import { FOOTER,EVENT_METADATA } from "../lib/constants";
 </script>
 
 <Layout
-  title={EVENT_METADATA.name}
-  description={EVENT_METADATA.description}
+  title={METADATA.name}
+  description={METADATA.description}
 >
   <main
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
@@ -41,7 +41,7 @@ import { FOOTER,EVENT_METADATA } from "../lib/constants";
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2 flex gap-4"
-      title="Click for Lyrics"
+      title="🎵 Click for Lyrics"
       href="/blog"
     />
     <ImageCard />

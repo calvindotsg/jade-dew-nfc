@@ -4,11 +4,13 @@ import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 const parser = new MarkdownIt();
 
+import { METADATA } from "../lib/constants.js";
+
 export async function GET(context) {
   const blog = await getCollection("blog");
   return rss({
-    title: "Gianmarco Cavallo’s Blog",
-    description: "my blog",
+    title: `${METADATA.name}`,
+    description: `${METADATA.description}`,
     site: context.site,
     items: blog.map((post) => ({
       title: post.data.title,

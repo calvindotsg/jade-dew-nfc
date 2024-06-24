@@ -1,29 +1,40 @@
 ---
-import { formatDate } from "../../lib/helpers";
+import { Image } from "astro:assets";
+import Card from "../Card/index.astro";
 
 interface Props {
   title: string;
   date: Date;
   url: string;
+  customData: string
 }
 
-const { title, date, url } = Astro.props;
+const { title, date, url, customData } = Astro.props;
 ---
 
-<li class="w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-2">
-  <a
-    class="text-sm md:text-base decoration-none flex justify-between"
-    href={`/blog/${url}`}
-  >
-    <p class="inline-block whitespace-nowrap">
-      {title}
-    </p>
-    <time
-      class="text-right tabular-nums"
-      datetime={date.toISOString()}
-      data-date={date.toISOString()}
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3">
+  <li class="w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors my-2">
+    <a
+      class="text-base md:text-base decoration-none flex justify-between"
+      href={`/blog/${url}`}
     >
-      {formatDate(date)}
-    </time>
-  </a>
-</li>
+      <div class="flex flex-col h-full">
+        <h6 class="m-0 font-light text-xl">
+          {title}
+        </h6>
+        <h6 class="m-0 font-light text-xl">
+          {new Date(date).getFullYear()}
+        </h6>
+      </div>
+      <div class="flex flex-col">
+        <Image
+          src={customData}
+          alt="cover"
+          width="200"
+          height="200"
+          class="max-w-[200px] max-h-[200px] select-none absolute relative right-[0px] bottom-auto z-auto opacity-100 md:opacity-100 md:relative md:right-[0px] md:bottom-auto md:z-auto pointer-events-none shadow-border"
+        />
+      </div>
+    </a>
+  </li>
+</Card>
