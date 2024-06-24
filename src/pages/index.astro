@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card/index.astro";
 import IntroCard from "../components/IntroCard.astro";
 import VideoCard from "../components/VideoCard.astro";
+import ImageCard from "../components/ImageCard.astro";
 import { FOOTER,EVENT_METADATA } from "../lib/constants";
 ---
 
@@ -43,6 +44,7 @@ import { FOOTER,EVENT_METADATA } from "../lib/constants";
       title="Lyrics"
       href="/blog"
     />
+    <ImageCard />
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
         {FOOTER.footer}

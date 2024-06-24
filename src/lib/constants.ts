@@ -9,12 +9,12 @@ export const LINKS: {
         name: "Facebook"
     },
     {
-        link: "https://www.instagram.com/derrickgohsh/",
-        logo: "fa6-brands:instagram",
-        name: "Instagram"
+        link: "https://wa.me/+6590484723",
+        logo: "fa6-brands:whatsapp",
+        name: "Whatsapp"
     },
     {
-        link: "https://go.gov.sg/nsl-ndc/",
+        link: "https://www.onepa.gov.sg/rc/jade-dew-rn/",
         logo: "fa6-regular:calendar",
         name: "Event"
     },

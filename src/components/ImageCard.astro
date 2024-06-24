@@ -1,0 +1,15 @@
+---
+import Card from "./Card/index.astro";
+import posterImage from '../assets/poster.webp'
+import { Image } from "astro:assets";
+---
+
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
+  <div class="flex flex-col gap-2">
+      <Image
+        src={posterImage}
+        class="w-full h-full object-cover select-none pointer-events-none shadow-border"
+        alt="poster"
+      />
+  </div>
+</Card>

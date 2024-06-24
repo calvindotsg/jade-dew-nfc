@@ -2,7 +2,8 @@
 import { formatDate } from "../lib/helpers";
 import type { MarkdownLayoutProps } from "astro";
 import BasicLayout from "./BasicLayout.astro";
-import { ORGANIZER_METADATA } from "../lib/constants";
+import {ORGANIZER_METADATA, VIDEO_CARD} from "../lib/constants";
+import {YouTube} from "astro-embed";
 
 type Props = MarkdownLayoutProps<{
   title: string;
@@ -35,6 +36,12 @@ const { frontmatter } = Astro.props;
         <p>{frontmatter.minutesRead}</p>
       </div>
     </div>
+    <YouTube
+      id={VIDEO_CARD.id}
+      title={VIDEO_CARD.title}
+      playlabel={`Play the video ${VIDEO_CARD.title}`}
+      poster={VIDEO_CARD.poster}
+    />
     <article class="prose prose-p:text-red-500 prose-slate prose-invert">
       <slot />
     </article>
