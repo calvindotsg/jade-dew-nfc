@@ -71,7 +71,7 @@ export const VIDEO_CARD: {
 } = {
     id: "JOc1RGkBviQ",
     title: "NDP 1998 Theme Song - Home",
-    poster: "https://pbs.twimg.com/card_img/1796041716497354752/P9p8hRzr?format=jpg&name=small"
+    poster: "https://blog.design-start.com/wp-content/uploads/2024/03/ndplogo2024.jpg"
 }
 
 export const loaderAnimation = [".loader", {
