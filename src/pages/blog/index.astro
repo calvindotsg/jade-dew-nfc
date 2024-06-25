@@ -1,51 +1,44 @@
 ---
-import { getCollection } from "astro:content";
+import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import PostRow from "../../components/Blog/PostRow.astro";
 
-import { METADATA } from "../../lib/constants";
+import {METADATA} from "../../lib/constants";
 import portfolioImage from '../../assets/me.webp'
 
-const posts = (await getCollection("blog"))?.sort(
-  (blogEntryA, blogEntryB) =>
-    (blogEntryB.data.pubDate || new Date()).getTime() -
-    (blogEntryA.data.pubDate || new Date()).getTime()
-);
+const posts = (await getCollection("blog"))?.sort((blogEntryA, blogEntryB) => (blogEntryB.data.pubDate || new Date()).getTime() - (blogEntryA.data.pubDate || new Date()).getTime());
 ---
 
 <script>
-  import { timeline, type TimelineDefinition } from "motion";
-  import { loaderAnimation } from "../../lib/constants";
+    import {timeline, type TimelineDefinition} from "motion";
+    import {loaderAnimation} from "../../lib/constants";
 
-  const sequence = [loaderAnimation];
+    const sequence = [loaderAnimation];
 
-  timeline(sequence as TimelineDefinition);
+    timeline(sequence as TimelineDefinition);
 </script>
 
 <Layout
-  title= {METADATA.name}
-  description={METADATA.description}
+        title={METADATA.name}
+        description={METADATA.description}
 >
-  <main
-    class="w-screen h-screen flex flex-col justify-start items-start max-w-3xl mx-auto p-8"
-  >
-    <a
-      href="/"
-      class="text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 mb-8 border-1 border-solid border-neutral-600 rounded-lg"
-      >Back</a
+    <main
+            class="w-screen h-screen flex flex-col justify-start items-start max-w-3xl mx-auto p-8"
     >
-    <h1 class="text-4xl font-bold mb-4 text-neutral-100">Lyrics</h1>
-    <ul class="w-full">
-      {
-        posts?.map((post) => (
-          <PostRow
-            title={post.data.title || "No title"}
-            date={post.data.pubDate || new Date()}
-            url={post.slug}
-            customData={post.data.customData || portfolioImage}
-          />
-        ))
-      }
-    </ul>
-  </main>
+        <a
+                href="/"
+                class="text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 mb-8 border-1 border-solid border-neutral-600 rounded-lg"
+        >Back</a
+        >
+        <h1 class="text-4xl font-bold mb-4 text-neutral-100">Lyrics</h1>
+        <ul class="w-full">
+            {posts?.map((post) => (
+                    <PostRow
+                            title={post.data.title || "No title"}
+                            date={post.data.pubDate || new Date()}
+                            url={post.slug}
+                            customData={post.data.customData || portfolioImage}
+                    />))}
+        </ul>
+    </main>
 </Layout>

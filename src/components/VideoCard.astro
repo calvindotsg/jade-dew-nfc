@@ -1,16 +1,16 @@
 ---
 import Card from "./Card/index.astro";
-import { VIDEO_CARD } from "../lib/constants";
-import { YouTube } from 'astro-embed'
+import {VIDEO_CARD} from "../lib/constants";
+import {YouTube} from 'astro-embed'
 ---
 
 <Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
-  <div class="flex flex-col gap-2">
-    <YouTube
-      id={VIDEO_CARD.id}
-      title={VIDEO_CARD.title}
-      playlabel={`Play the video ${VIDEO_CARD.title}`}
-      poster={VIDEO_CARD.poster}
-    />
-  </div>
+    <div class="flex flex-col gap-2">
+        <YouTube
+                id={VIDEO_CARD.id}
+                title={VIDEO_CARD.title}
+                playlabel={`Play the video ${VIDEO_CARD.title}`}
+                poster={VIDEO_CARD.poster}
+        />
+    </div>
 </Card>

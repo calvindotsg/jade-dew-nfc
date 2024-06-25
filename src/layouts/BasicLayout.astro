@@ -1,5 +1,5 @@
 ---
-import { METADATA, LINKS } from "../lib/constants";
+import {METADATA, LINKS} from "../lib/constants";
 
 interface Props {
     title: string;
@@ -16,18 +16,13 @@ const {title, description, page, slug, frontmatter} = Astro.props;
 const image = `${Astro.url.origin}/preview.jpg`;
 
 const schema = {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": METADATA.name, // Name of the organization
+    "@context": "http://schema.org", "@type": "Organization", "name": METADATA.name, // Name of the organization
     "url": METADATA.site_url, // URL of the organization
     "sameAs": LINKS.map(item => item.link), // Social media profiles
     "logo": METADATA.image_url, // URL to an image of the organization's logo
     "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": METADATA.contact_phone,
-        "contactType": "Customer Service"
-    },
-    "address": {
+        "@type": "ContactPoint", "telephone": METADATA.contact_phone, "contactType": "Customer Service"
+    }, "address": {
         "@type": "PostalAddress",
         "streetAddress": METADATA.street_address,
         "addressLocality": METADATA.city,
@@ -36,7 +31,6 @@ const schema = {
         "addressCountry": METADATA.country
     }
 };
-
 ---
 
 <!doctype html>
@@ -70,7 +64,7 @@ const schema = {
     <link rel="preconnect" href="https://cdn.fontshare.com"/>
     <script type="application/ld+json" set:html={JSON.stringify(schema)}/>
     <script defer src="https://analytics.us.umami.is/script.js" data-website-id={import.meta.env.UMAMI_ID}></script>
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml"/>
 </head>
 <body
         class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"
