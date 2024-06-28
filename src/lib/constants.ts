@@ -49,8 +49,8 @@ export const METADATA: {
 export const VIDEO_CARD: {
     id: string, title: string, poster: string,
 } = {
-    id: "JOc1RGkBviQ",
-    title: "NDP 1998 Theme Song - Home",
+    id: "Jkqu3oMTs9o",
+    title: "NDP 2024 Theme Song - Not Alone",
     poster: "https://blog.design-start.com/wp-content/uploads/2024/03/ndplogo2024.jpg"
 }
 
