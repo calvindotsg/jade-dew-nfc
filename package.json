@@ -44,5 +44,10 @@
     "motion": "^10.17.0",
     "sanitize-html": "^2.13.0",
     "unocss": "^0.59.0"
+  },
+  "overrides": {
+    "astro-icon": {
+      "@iconify/tools": "^4.0.0"
+    }
   }
 }
