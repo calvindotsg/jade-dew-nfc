@@ -5,7 +5,7 @@ description: "Lyrics for National Day Parade 1990 Theme song: One People, One Na
 pubDate: 1990-08-09
 category: "lyrics"
 author: "Jeremy Monteiro & Jim Aitchison"
-customData: "https://jadedew.netlify.app/lyrics/1987.webp"
+customData: "https://jadedew.netlify.app/lyrics/1990.webp"
 youtube_id: "HVxk2SK4Wmg"
 ---
 
