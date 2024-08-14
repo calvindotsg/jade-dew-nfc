@@ -34,7 +34,12 @@ export default defineConfig({
   vite: {
     build: {
       rollupOptions: {
-        external: (id) => id.includes('@astrojs/netlify/ssr-function.js') ? false : id,
+        external: (id) => {
+          if (id.includes('@astrojs/netlify/ssr-function.js') || id.includes('@astro-renderers')) {
+            return false;
+          }
+          return id;
+        },
       },
     },
     assetsInclude: '**/*.riv',
