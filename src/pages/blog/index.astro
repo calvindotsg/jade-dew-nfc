@@ -31,7 +31,7 @@ const posts = (await getCollection("blog"))?.sort((blogEntryA, blogEntryB) => (b
         >Back</a
         >
         <h1 class="text-4xl font-bold mb-4 text-neutral-100">Lyrics</h1>
-        <ul class="w-full">
+        <ul class="w-full space-y-4">
             {posts?.map((post) => (
                     <PostRow
                             title={post.data.title || "No title"}
