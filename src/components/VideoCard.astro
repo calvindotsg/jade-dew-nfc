@@ -1,16 +1,28 @@
 ---
 import Card from "./Card/index.astro";
+import {getCollection} from "astro:content";
 import {VIDEO_CARD} from "../lib/constants";
 import {YouTube} from 'astro-embed'
+import PostRow from "./Blog/PostRow.astro";
+import {getCollection} from "astro:content";
+import portfolioImage from '../assets/me.webp'
+
+const posts_favorites = (await getCollection("blog"))?.filter((blogEntry) => {
+    const year = new Date(blogEntry.data.pubDate).getFullYear();
+    return [1984, 1986, 1990].includes(year);
+});
 ---
 
-<Card colSpan="md:col-span-2" rowSpan="md:row-span-4">
-    <div class="flex flex-col gap-2">
-        <YouTube
-                id={VIDEO_CARD.id}
-                title={VIDEO_CARD.title}
-                playlabel={`Play the video ${VIDEO_CARD.title}`}
-                poster={VIDEO_CARD.poster}
-        />
-    </div>
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-15">
+    <h6 class="text-sm font-light m-0 text-gray-500">Song sheets</h6>
+    <ul class="w-full">
+        {posts_favorites?.map((post) => (
+            <PostRow
+                title={post.data.title || "No title"}
+                date={post.data.pubDate || new Date()}
+                url={post.slug}
+                customData={post.data.customData || portfolioImage}
+            />
+        ))}
+    </ul>
 </Card>

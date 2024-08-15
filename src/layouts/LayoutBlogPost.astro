@@ -2,6 +2,7 @@
 import {formatDate} from "../lib/helpers";
 import type {MarkdownLayoutProps} from "astro";
 import BasicLayout from "./BasicLayout.astro";
+import VideoCard from "../components/VideoCard.astro";
 import {METADATA} from "../lib/constants";
 import {YouTube} from "astro-embed";
 
@@ -48,5 +49,6 @@ const {frontmatter} = Astro.props;
                 <slot/>
             </article>
         </div>
+        <VideoCard/>
     </main>
 </BasicLayout>

@@ -5,12 +5,12 @@ import {Image} from "astro:assets";
 import {METADATA} from "../lib/constants";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-3">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
     <div class="flex flex-col gap-2">
         <a href={METADATA.site_url} aria-label={METADATA.name} target="_blank" key={METADATA.name}>
             <Image
                     src={posterImage}
-                    class="w-full h-full object-cover select-none pointer-events-none shadow-border"
+                    class="w-auto max-h-[200px] object-cover select-none pointer-events-none shadow-border"
                     alt="poster"
             />
         </a>
